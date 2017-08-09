@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <style>
+      #map {
+        width: 100%;
+        height: 400px;
+        background-color: grey;
+      }
+    </style>
+  </head>
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -58,41 +67,24 @@
     </div>
   </div>
 
-  <body>
-    <div id="googleMap1" style="width:400px;height:300px;"></div>
-<br>
-<div id="googleMap2" style="width:400px;height:300px;"></div>
-<br>
-<div id="googleMap3" style="width:400px;height:300px;"></div>
-<br>
-<div id="googleMap4" style="width:400px;height:300px;"></div>
-
-<script>
-function myMap() {
-  var mapOptions1 = {
-    center: new google.maps.LatLng(51.508742,-0.120850),
-    zoom:9,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  };
-  var mapOptions2 = {
-    center: new google.maps.LatLng(51.508742,-0.120850),
-    zoom:9,
-    mapTypeId: google.maps.MapTypeId.SATELLITE
-  };
-  var mapOptions3 = {
-    center: new google.maps.LatLng(51.508742,-0.120850),
-    zoom:9,
-    mapTypeId: google.maps.MapTypeId.HYBRID
-  };
-  
-  var map1 = new google.maps.Map(document.getElementById("googleMap1"),mapOptions1);
-  var map2 = new google.maps.Map(document.getElementById("googleMap2"),mapOptions2);
-  var map3 = new google.maps.Map(document.getElementById("googleMap3"),mapOptions3);
-  var map4 = new google.maps.Map(document.getElementById("googleMap4"),mapOptions4);
-}
-</script>
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIJ0k0-qtgq74s2NOnZ-6vuTYol7_Plwg&callback=myMap">
+<body>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIJ0k0-qtgq74s2NOnZ-6vuTYol7_Plwg&callback=initMap">
+    </script>
   </body>
 
   <div class="w3-container w3-padding-32" id="about">
