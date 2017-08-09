@@ -31,10 +31,10 @@
     <a href="#home" class="w3-bar-item w3-button">Immigration Nation</a>
     <!-- Float links to the right. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
-      <a href="#english" class="w3-bar-item w3-button">English Classes</a>
-      <a href="#community" class="w3-bar-item w3-button">Community Centers/Clubs</a>
-      <a href="#resources" class="w3-bar-item w3-button">Resources</a>
-      <a href= "#aboutus" class="w3-bar-item w3-button">About Us</a>
+      <a href="english.html" class="w3-bar-item w3-button">English Classes</a>
+      <a href="community.html" class="w3-bar-item w3-button">Community Centers</a>
+      <a href="resources.html" class="w3-bar-item w3-button">Resources</a>
+      <a href= "aboutus.html" class="w3-bar-item w3-button">About Us</a>
     </div>
   </div>
 </div>
@@ -85,40 +85,6 @@
     </center>
     </div>
   </div>
-<script>
-  var index = 0; /*Creating a variable called index and it stores 0*/
-  slideshow(); /*This calls the funciton slideshow and it has no parameters. It's like a broadcast, you call it so it can run. If you don't it's not going to run but there are ways around this.  */
-
-  function slideshow() { /*This defines the function*/
-      var i; /*This is a variable called i*/
-      var elements = document.getElementsByClassName("slides");/*The variable is document and the function is getElementsByClassName. It's saying to take the function and applying it to the variable. The variable calls the function and the function takes a parameter called slides. Elements store a list of slides that contains an image */
-
-      for (i = 0; i < elements.length; i++) {
-
-          elements[i].style.display = "none";
-
-      }
-<<<<<<< HEAD
-=======
-    </script>
-    <script async defer
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIJ0k0-qtgq74s2NOnZ-6vuTYol7_Plwg&callback=initMap">
-    </script>
-  </body>
->>>>>>> 07e6ba196f13547b63fa5e415df65709d22619ae
-
-      index++; /*Add 1 to index */
-
-      if (index > elements.length) {/* If index is greater than one set it to 1*/
-          index = 1; /* This allows the slideshow to repeat forever because it sets it back to 1*/
-      }
-
-      elements[index-1].style.display = "block";/* Take the picture element[index-1] and display it*/
-      setTimeout(slideshow, 2000);
-      /* Wait two seconds*/
-      /* Slideshow ^ runs it again by calling slideshow*/
-  }
-  /* i -> disappear and index is dealing with appearing  */
 
 
   </script>
@@ -138,4 +104,31 @@
 <!-- End page content -->
 </div>
 </body>
+<script>
+  var index = 0; /*Creating a variable called index and it stores 0*/
+  slideshow(); /*This calls the funciton slideshow and it has no parameters. It's like a broadcast, you call it so it can run. If you don't it's not going to run but there are ways around this.  */
+
+  function slideshow() { /*This defines the function*/
+      var i; /*This is a variable called i*/
+      var elements = document.getElementsByClassName("slides");/*The variable is document and the function is getElementsByClassName. It's saying to take the function and applying it to the variable. The variable calls the function and the function takes a parameter called slides. Elements store a list of slides that contains an image */
+
+      for (i = 0; i < elements.length; i++) {
+
+          elements[i].style.display = "none";
+
+      }
+
+
+      index++; /*Add 1 to index */
+
+      if (index > elements.length) {/* If index is greater than one set it to 1*/
+          index = 1; /* This allows the slideshow to repeat forever because it sets it back to 1*/
+      }
+
+      elements[index-1].style.display = "block";/* Take the picture element[index-1] and display it*/
+      setTimeout(slideshow, 2000);
+      /* Wait two seconds*/
+      /* Slideshow ^ runs it again by calling slideshow*/
+  }
+  </script>
 </html>
