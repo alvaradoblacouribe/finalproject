@@ -1,28 +1,9 @@
 <!DOCTYPE html>
 <html>
-<style>
-  #map {
-    height: 400px;
-    width: 100%;
-  }
-  </style>
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<head>
-<style>
-.slideshow {
-  background-color:rgb(255,102,102);
-  overflow: hidden;
-  width: 100%;
-  height: 500px;
-  margin-left:auto;
-  margin-right:auto;
-}
-</style>
-</head>
-
 <body>
 
 <!-- Navbar (sit on top) -->
@@ -31,10 +12,10 @@
     <a href="#home" class="w3-bar-item w3-button">Immigration Nation</a>
     <!-- Float links to the right. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
-      <a href="english.html" class="w3-bar-item w3-button">English Classes</a>
-      <a href="community.html" class="w3-bar-item w3-button">Community Centers</a>
-      <a href="resources.html" class="w3-bar-item w3-button">Resources</a>
-      <a href= "aboutus.html" class="w3-bar-item w3-button">About Us</a>
+      <a href="#english" class="w3-bar-item w3-button">English Classes</a>
+      <a href="#community" class="w3-bar-item w3-button">Community Centers/Clubs</a>
+      <a href="#resources" class="w3-bar-item w3-button">Resources</a>
+      <a href= "#aboutus" class="w3-bar-item w3-button">About Us</a>
     </div>
   </div>
 </div>
@@ -47,13 +28,6 @@
   </div>
 </header>
 
-<center><div class="slideshow">
-    <img class="slides" src="city-underground.jpg">
-    <img class="slides" src="seahorse.jpg">
-    <img class="slides" src="trinity-college-dublin.jpg">
-    </center>
-
-
 <!-- Page content -->
 <div class="w3-content w3-padding" style="max-width:1564px">
 
@@ -63,7 +37,6 @@
 
   <div class="w3-row-padding w3-grayscale">
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <center>
 
       <h3>South and Central America</h3>
 
@@ -82,12 +55,46 @@
 
       <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
 
-    </center>
     </div>
   </div>
 
+  <body>
+    <div id="googleMap1" style="width:400px;height:300px;"></div>
+<br>
+<div id="googleMap2" style="width:400px;height:300px;"></div>
+<br>
+<div id="googleMap3" style="width:400px;height:300px;"></div>
+<br>
+<div id="googleMap4" style="width:400px;height:300px;"></div>
 
-  </script>
+<script>
+function myMap() {
+  var mapOptions1 = {
+    center: new google.maps.LatLng(51.508742,-0.120850),
+    zoom:9,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  var mapOptions2 = {
+    center: new google.maps.LatLng(51.508742,-0.120850),
+    zoom:9,
+    mapTypeId: google.maps.MapTypeId.SATELLITE
+  };
+  var mapOptions3 = {
+    center: new google.maps.LatLng(51.508742,-0.120850),
+    zoom:9,
+    mapTypeId: google.maps.MapTypeId.HYBRID
+  };
+  
+  var map1 = new google.maps.Map(document.getElementById("googleMap1"),mapOptions1);
+  var map2 = new google.maps.Map(document.getElementById("googleMap2"),mapOptions2);
+  var map3 = new google.maps.Map(document.getElementById("googleMap3"),mapOptions3);
+  var map4 = new google.maps.Map(document.getElementById("googleMap4"),mapOptions4);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIJ0k0-qtgq74s2NOnZ-6vuTYol7_Plwg&callback=myMap">
+  </body>
+
   <div class="w3-container w3-padding-32" id="about">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Purpose</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
@@ -99,36 +106,9 @@
 
 
   <!-- Contact Section -->
-
+  
 
 <!-- End page content -->
 </div>
 </body>
-<script>
-  var index = 0; /*Creating a variable called index and it stores 0*/
-  slideshow(); /*This calls the funciton slideshow and it has no parameters. It's like a broadcast, you call it so it can run. If you don't it's not going to run but there are ways around this.  */
-
-  function slideshow() { /*This defines the function*/
-      var i; /*This is a variable called i*/
-      var elements = document.getElementsByClassName("slides");/*The variable is document and the function is getElementsByClassName. It's saying to take the function and applying it to the variable. The variable calls the function and the function takes a parameter called slides. Elements store a list of slides that contains an image */
-
-      for (i = 0; i < elements.length; i++) {
-
-          elements[i].style.display = "none";
-
-      }
-
-
-      index++; /*Add 1 to index */
-
-      if (index > elements.length) {/* If index is greater than one set it to 1*/
-          index = 1; /* This allows the slideshow to repeat forever because it sets it back to 1*/
-      }
-
-      elements[index-1].style.display = "block";/* Take the picture element[index-1] and display it*/
-      setTimeout(slideshow, 2000);
-      /* Wait two seconds*/
-      /* Slideshow ^ runs it again by calling slideshow*/
-  }
-  </script>
 </html>
