@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<title>Immigration Nation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<head>
+ <style>
+ .slideshow {
+   background-color:rgb(255,102,102);
+   overflow: hidden;
+   width: 100%;
+   height: 10px;
+   margin-left:auto;
+   margin-right:auto;
+ }
+
+ .contentmain {
+   column-count:3 ;
+   column-gap: 30px;
+   column-rule-style:solid;
+   padding:50px;
+   margin:auto;
+
+
+  }
+
+html,body { margin:0; padding: 0; }
+#main_block {
+  display: block; /* Useless, divs are display:block */
+  width: 100%;    /* Useless, display:block elements are width:100% by default */
+  height: 100%;   /* Fairly useless now, should take children's height */
+  font-size:0;    /* Force space between inline-block elements to be 0 */
+}
+#left_frame {
+  width: 400px;
+  length: 500px;
+}
+#right_frame {
+  width: 400px;
+  length: 500px;
+}
+#left_frame,#right_frame {
+  display: inline-block;
+  box-sizing: border-box;
+  height: calc(400vh - 500px);
+}
+
+ </style>
+</head>
+<body>
+
+
+</div>
+
+<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card-2">
+    <a href="index.html" class="w3-bar-item w3-button"> Immigration Nation</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="english.html" class="w3-bar-item w3-button">English Classes</a>
+      <a href="community.html" class="w3-bar-item w3-button">Community Centers</a>
+      <a href="resources.html" class="w3-bar-item w3-button">Resources</a>
+      <a href="aboutus.html" class="w3-bar-item w3-button">About Us </a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+
+</header>
+
+<!-- Page content -->
+<center><div class="slideshow">
+    <img class="slides" src="city-fog.jpg">
+    <img class="slides" src="new-york-liberty.jpg">
+    <img class="slides" src="city-cafe.jpg">
+    </center>
+  <!-- Content of Homepage-->
+  <div class="contentmain">
+
+  <!--The Problem-->
+  <center> <h2> The Problem</h2>
+  <p>
+From trying to reach the land of opportunity to just trying to find your way through an unaccepting society, minorities have always had to depend on themselves to make it in America. In 2015, one quarter of the undocumented immigrants arrested were innocent, and more than half of all U.S. immigrants live in or near poverty. It’s time minorities have the information they need to feel safe in order to live as Americans.
+
+  </p>
+  <!--The Solution-->
+  <br>
+<h2> Our Goal</h2>
+<p>
+  This website focuses on aiding immigrant and citizen minorities in the US by providing accessible resources and information relevant to their ethnicity and citizenship status By offering free legal resources for people not familiar with the American legal process and whom do not speak English, providing maps of communities with similar ethnic interests, offering locations of nearby English classes, as well as showing locations of career and help centers specifically targeted for immigrants and new citizens.
+</p>
+  <!--The Impact-->
+  <br>
+<h2> Mission Statement </h2>
+<p>
+  Our main goal is to make the process of integrating into American society as easy as possible while allowing one to preserve ethnic and cultural ties with one’s mother country. Through this easy-to-use website, we provide information on New York City-centered resources and try to make our information accessible as possible. In making interaction easier, we hope to see our fellow minorities grow with pride in where they come from while being able to sustain themselves in the new land they find themselves in.
+
+</p>
+  </div> </center>
+
+ <div id="main_block">
+  <iframe id="left_frame" width="400" height="500" frameborder="0" scrolling="no" src="//plot.ly/~roxana412/3.embed"></iframe>
+  <iframe id="right_frame" width="400" height="500" frameborder="0" scrolling="no" src="//plot.ly/~roxana412/5.embed"></iframe>
+</div>
+
+
+<!-- End page content -->
+</div>
+
+<script>
+
+var index = 0; /*Creating a variable called index and it stores 0*/
+slideshow(); /*This calls the funciton slideshow and it has no parameters. It's like a broadcast, you call it so it can run. If you don't it's not going to run but there are ways around this.  */
+
+function slideshow() { /*This defines the function*/
+    var i; /*This is a variable called i*/
+    var elements = document.getElementsByClassName("slides");/*The variable is document and the function is getElementsByClassName. It's saying to take the function and applying it to the variable. The variable calls the function and the function takes a parameter called slides. Elements store a list of slides that contains an image */
+
+    for (i = 0; i < elements.length; i++) {
+
+        elements[i].style.display = "none";
+
+    }
+
+    index++; /*Add 1 to index */
+
+    if (index > elements.length) {/* If index is greater than one set it to 1*/
+        index = 1; /* This allows the slideshow to repeat forever because it sets it back to 1*/
+    }
+
+    elements[index-1].style.display = "block";/* Take the picture element[index-1] and display it*/
+    setTimeout(slideshow, 2000);
+    /* Wait two seconds*/
+    /* Slideshow ^ runs it again by calling slideshow*/
+}
+/* i -> disappear and index is dealing with appearing  */
+
+
+</script>
+
+
+</body>
+</html>
