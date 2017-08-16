@@ -33,6 +33,19 @@ html,body { margin:0; padding: 0; }
   height: 100%;   /* Fairly useless now, should take children's height */
   font-size:0;    /* Force space between inline-block elements to be 0 */
 }
+  #left_frame {
+  width: 400px;
+  length: 500px;
+}
+#right_frame {
+  width: 400px;
+  length: 500px;
+}
+#left_frame,#right_frame {
+  display: inline-block;
+  box-sizing: border-box;
+  height: calc(400vh - 500px);
+}
 
  </style>
 </head>
@@ -99,12 +112,7 @@ From trying to reach the land of opportunity to just trying to find your way thr
 </div>
 
  
- <div>
-  <center>
-  <img src="piechart.png" ALT="wowy" WIDTH="32" HEIGHT="32">
-  <iframe width="500" height="400" frameborder="0" scrolling="no" src="//plot.ly/~roxana412/3.embed"></iframe>
-  </center>
- </div>
+ 
 
 <!-- End page content -->
 </div>
