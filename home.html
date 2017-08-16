@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>Immigration Nation</title>
+<title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -26,31 +26,15 @@
 
   }
 
-html,body { margin:0; padding: 0; }
-#main_block {
-  display: block; /* Useless, divs are display:block */
-  width: 100%;    /* Useless, display:block elements are width:100% by default */
-  height: 100%;   /* Fairly useless now, should take children's height */
-  font-size:0;    /* Force space between inline-block elements to be 0 */
-}
-#left_frame {
-  width: 400px;
-  length: 500px;
-}
-#right_frame {
-  width: 400px;
-  length: 500px;
-}
-#left_frame,#right_frame {
-  display: inline-block;
-  box-sizing: border-box;
-  height: calc(400vh - 500px);
-}
-
  </style>
 </head>
 <body>
 
+<center><div class="slideshow">
+    <img class="slides" src="city-fog.jpg">
+    <img class="slides" src="new-york-liberty.jpg">
+    <img class="slides" src="city-cafe.jpg">
+    </center>
 
 </div>
 
@@ -62,7 +46,7 @@ function googleTranslateElementInit() {
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-wide w3-padding w3-card-2">
-    <a href="index.html" class="w3-bar-item w3-button"> Immigration Nation</a>
+    <a href="home.html" class="w3-bar-item w3-button"> Immigration Nation</a>
     <!-- Float links to the right. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
       <a href="english.html" class="w3-bar-item w3-button">English Classes</a>
@@ -79,11 +63,7 @@ function googleTranslateElementInit() {
 </header>
 
 <!-- Page content -->
-<center><div class="slideshow">
-    <img class="slides" src="city-fog.jpg">
-    <img class="slides" src="new-york-liberty.jpg">
-    <img class="slides" src="city-cafe.jpg">
-    </center>
+
   <!-- Content of Homepage-->
   <div class="contentmain">
 
@@ -107,10 +87,12 @@ From trying to reach the land of opportunity to just trying to find your way thr
 
 </p>
   </div> </center>
-
- <div id="main_block">
+ 
+ <div>
+  </center>
   <iframe id="left_frame" width="400" height="500" frameborder="0" scrolling="no" src="//plot.ly/~roxana412/3.embed"></iframe>
   <iframe id="right_frame" width="400" height="500" frameborder="0" scrolling="no" src="//plot.ly/~roxana412/5.embed"></iframe>
+ </center>
 </div>
 
 
