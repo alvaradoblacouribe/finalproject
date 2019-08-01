@@ -31,3 +31,7 @@ Some immigrants come to the United States and feel left out due to the different
 
 We are a group of Girls Who Code Summer Immersion Program students from New York City that are passionate about technology and improving the world that we live in
 
+# Languages Used 
+HTML
+CSS
+JavaScript
