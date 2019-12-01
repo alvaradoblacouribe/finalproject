@@ -1,6 +1,6 @@
 # Immigration Nation 
 
-<a href="http://www.immigrationnation.website/index.html">Immigration Nation</a> is a website designed to help immigrants in the Greater New York City Area. In a span of two weeks, we created a site where recently immigrated immigrants could find legal resources, communicy centers and restaurants, and english classes. We included Google Translate in order to allow immigrants that are not familiar with the English language to use it. 
+<a href="http://www.immigrationnation.website/index.html">Immigration Nation</a> is a website designed to help immigrants in the Greater New York City Area. In a span of two weeks, we created a site where recently immigrated immigrants could find legal resources, community centers and restaurants, and english classes. We included Google Translate in order to allow immigrants that are not familiar with the English language to use it. 
 
 # The Problem
 
